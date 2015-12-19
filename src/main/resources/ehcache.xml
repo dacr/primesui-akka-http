@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="ehcache.xsd"
+          updateCheck="true" monitoring="autodetect"
+          dynamicConfig="true" name="primesCache">
+
+	<defaultCache 
+	    maxEntriesLocalHeap="10000"
+	    eternal="false"
+		timeToIdleSeconds="600"
+		timeToLiveSeconds="3600"
+		overflowToDisk="false"
+		statistics="true"
+		/>
+
+    <!-- checked value cache, indexed by the value -->
+    <cache
+		name="CachedValuesCache"
+        maxEntriesLocalHeap="20000"
+		timeToIdleSeconds="600"
+		timeToLiveSeconds="3600"
+        statistics="true"
+        />
+
+    <!-- prime values cache, indexed by the position -->
+    <cache
+        name="PrimesCache"
+        maxEntriesLocalHeap="20000"
+        timeToIdleSeconds="600"
+        timeToLiveSeconds="3600"
+        statistics="true"
+        />
+
+    <!-- various counters temporary cache -->
+    <cache
+        name="CountersCache"
+        maxEntriesLocalHeap="10"
+        timeToIdleSeconds="10"
+        timeToLiveSeconds="300"
+        statistics="true"
+        />
+
+    <!-- last known values cache (prime and not prime) -->
+    <cache
+        name="LastCache"
+        maxEntriesLocalHeap="10"
+        timeToIdleSeconds="10"
+        timeToLiveSeconds="300"
+        statistics="true"
+        />
+
+    <!-- value primes factors, indexed by the value -->
+    <cache
+        name="FactorsCache"
+        maxEntriesLocalHeap="5000"
+        timeToIdleSeconds="3600"
+        timeToLiveSeconds="7200"
+        statistics="true"
+        />
+
+    <!-- ulam image cache, indexed by the size -->
+    <cache
+        name="UlamCache"
+        maxEntriesLocalHeap="500"
+        timeToIdleSeconds="3600"
+        timeToLiveSeconds="0"
+        statistics="true"
+        />
+
+
+</ehcache>
