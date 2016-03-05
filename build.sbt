@@ -8,16 +8,15 @@ scalaVersion := "2.11.7"
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 libraryDependencies ++= {
-  val akkaV       = "2.4.1"
-  val akkaStreamV = "2.0-M2"
-  val scalaTestV  = "2.2.5"
+  val akkaV       = "2.4.2"
+  val scalaTestV  = "2.2.6"
   Seq(
     "com.typesafe.akka" %% "akka-actor"                           % akkaV,
-    "com.typesafe.akka" %% "akka-stream-experimental"             % akkaStreamV,
-    "com.typesafe.akka" %% "akka-http-core-experimental"          % akkaStreamV,
-    "com.typesafe.akka" %% "akka-http-experimental"               % akkaStreamV,
-    "com.typesafe.akka" %% "akka-http-spray-json-experimental"    % akkaStreamV,
-    "com.typesafe.akka" %% "akka-http-testkit-experimental"       % akkaStreamV,
+//    "com.typesafe.akka" %% "akka-stream-experimental"             % akkaV,
+//    "com.typesafe.akka" %% "akka-http-core-experimental"          % akkaV,
+    "com.typesafe.akka" %% "akka-http-experimental"               % akkaV,
+    "com.typesafe.akka" %% "akka-http-spray-json-experimental"    % akkaV,
+//    "com.typesafe.akka" %% "akka-http-testkit-experimental"       % akkaV,
     "fr.janalyse"       %% "primes"                               % "1.2.2-SNAPSHOT",
     "fr.janalyse"       %% "unittools"                            % "0.2.7-SNAPSHOT",
     "fr.janalyse"       %% "janalyse-jmx"                         % "0.7.1",
